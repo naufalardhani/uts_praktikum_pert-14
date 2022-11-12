@@ -1,0 +1,8 @@
+
+
+ [+] Penugasan
+
+  -Create, Read, Update, Delete
+  -Data Karyawan
+  -Pencatatan barang
+  -Kasir

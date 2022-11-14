@@ -1,1 +1,11 @@
-{"karyawan": [{"nama": "Muhammad Naufal Ardhani", "umur": 18, "role": "IT Security"}, {"nama": "Fauzi", "umur": 18, "role": "Office Boy"}, {"nama": "Icha", "umur": 18, "role": "Gatau"}]}
+{"karyawan": [{"id": "1", "nama": "Muhammad Naufal Ardhani", "umur": 18, "role": "IT Security"}, {"id": "2", "nama": "Fauzi", "umur": 18, "role": "Office Boy"}, {"id": "3", "nama": "Icha", "umur": 18, "role": "Gatau"}]}
+
+["1", "2", "3"]
+{
+    "mahasiswa_inf": [
+        {
+            "id": "1",
+            "nama": "Fikri"
+        }
+    ]
+}

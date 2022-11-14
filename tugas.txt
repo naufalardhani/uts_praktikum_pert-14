@@ -1,8 +1,11 @@
 
 
+
+
  [+] Penugasan
 
-  -Create, Read, Update, Delete
-  -Data Karyawan
+  -Bikin effect output berjalan dari tools google dorker
+  -Create (udah), Read (udah), Update, Delete
+  -Data Karyawan (udah)
   -Pencatatan barang
   -Kasir

@@ -1,11 +1,1 @@
-{"karyawan": [{"id": "1", "nama": "Muhammad Naufal Ardhani", "umur": 18, "role": "IT Security"}, {"id": "2", "nama": "Fauzi", "umur": 18, "role": "Office Boy"}, {"id": "3", "nama": "Icha", "umur": 18, "role": "Gatau"}]}
-
-["1", "2", "3"]
-{
-    "mahasiswa_inf": [
-        {
-            "id": "1",
-            "nama": "Fikri"
-        }
-    ]
-}
+{"karyawan": [{"id": "1", "nama": "Muhammad Naufal Ardhani", "umur": 18, "role": "IT Security"}, {"id": "2", "nama": "Fauzi", "umur": 18, "role": "CEO"}, {"id": "3", "nama": "Icha", "umur": 18, "role": "Secretary"}, {"id": "4", "nama": "Mario", "umur": 18, "role": "Senior Graphics & UI/UX Designer"}, {"id": "5", "nama": "1ass", "umur": 3, "role": "3"}]}

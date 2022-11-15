@@ -10,6 +10,6 @@ def show_banner():
     {Color.CPURPLE2}██║██║ ╚████║██║         ███████╗██╔╝ ██╗██║     ██║  ██║███████╗███████║███████║
     {Color.CPURPLE2}╚═╝╚═╝  ╚═══╝╚═╝         ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
     
-                   >{Color.ENDC} Ekspedisi Dalam Negeri Terbaik di Indonesia{Color.ENDC}               """
+                   >{Color.ENDC} Ekspedisi Dalam Negeri Terbaik di Indonesia{Color.ENDC}\n"""
 
     print(txt)

@@ -11,5 +11,3 @@ Project UAS Praktikum INF-EXPRESS
 
 # Author
 - [@naufalardhani](https://github.com/naufalardhani/) - Muhammad Naufal Ardhani - J0403221133 - TRPL A1
-- [@projectdiscovery](https://github.com/projectdiscovery) - because I was inspired by their project which is [httpx](https://github.com/projectdiscovery/httpx/), that's why I made domhttpx
-- [@p4kl0nc4t](https://github.com/p4kl0nc4t) - who has given many solutions in making domHttpx

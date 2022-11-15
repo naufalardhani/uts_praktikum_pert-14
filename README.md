@@ -10,4 +10,4 @@ Project UAS Praktikum INF-EXPRESS
 
 
 # Author
-- [@naufalardhani](https://github.com/naufalardhani/) - Muhammad Naufal Ardhani - J0403221133 - TRPL A1
+- [@naufalardhani](https://github.com/naufalardhani/) | Muhammad Naufal Ardhani - J0403221133

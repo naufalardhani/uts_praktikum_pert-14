@@ -5,7 +5,7 @@
 </p>
 
 Project UAS Praktikum INF-EXPRESS
-# Install
+# Installation
 
 ## MacOS & Linux
 ```sh

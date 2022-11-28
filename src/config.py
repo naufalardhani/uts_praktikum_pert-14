@@ -9,3 +9,10 @@ anggota_kelompok = [
     "Fauzi",
     "Icha"
 ]
+
+
+class Option:
+    opt1 = "Lihat Daftar Kiriman"
+    opt2 = "Tambah Kiriman"
+    opt3 = "Update Status"
+    opt4 = "Hapus Kiriman"

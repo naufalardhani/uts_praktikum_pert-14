@@ -1,10 +1,10 @@
 #https://stackoverflow.com/questions/69381312/in-vs-code-importerror-cannot-import-name-mapping-from-collections
 
 from __future__ import print_function, unicode_literals
-
 from PyInquirer import style_from_dict, Token, prompt, Separator
 from pprint import pprint
 
+from src.config import Option
 
 style = style_from_dict({
     Token.Separator: '#cc5454',
@@ -21,28 +21,20 @@ def show_option():
     questions = [
         {
             'type': 'list',
-            'message': 'Select Menu',
+            'message': 'Admin Dashboard | Kiriman Page',
             'name': 'inf-opt',
             'choices': [
-                Separator('= Karyawan ='),
                 {
-                    'name': 'Lihat Daftar Karyawan'
+                    'name': Option.opt1
                 },
                 {
-                    'name': 'Tambah Karyawan'
+                    'name': Option.opt2
                 },
                 {
-                    'name': 'Update Karyawan'
+                    'name': Option.opt3
                 },
                 {
-                    'name': 'Hapus Karyawan'
-                },
-                Separator('= Barang ='),
-                {
-                    'name': 'Pencatatan Barang'
-                },
-                {
-                    'name': 'Kasir'
+                    'name': Option.opt4
                 },
                 {
                     'name': 'Exit'

@@ -16,7 +16,10 @@ def success(sentence):
     return f"[{hijau}SUCCESS{hapus}] {sentence}"
 
 def failed(sentence):
-    return f"[{ merah }FAILED{ hapus }] {sentence}"
+    return f"{ merah }?{ hapus } {sentence}"
+
+def info(sentence):
+    return f"{ungu}?{hapus} {sentence} "
 
 def input_string(sentence):
-    return f"[{ungu}INPUT{hapus}] {sentence}"
+    return f"{ungu}?{hapus} {sentence} > "

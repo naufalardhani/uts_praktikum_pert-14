@@ -2,6 +2,7 @@ import os
 import sys
 import json
 
+from src.config import Option
 from src.karyawan import Karyawan
 from src.banner import show_banner
 from src.option import show_option
@@ -14,11 +15,13 @@ def main():
     
     while True:
         opt = show_option()['inf-opt']
-        if  opt == str("Lihat Daftar Karyawan"):
+        if  opt == str(Option.opt1):
             k.check_karyawan()
-        elif opt == str("Tambah Karyawan"):
+        elif opt == str(Option.opt2):
             k.add_karyawan()
-        elif opt == str("Hapus Karyawan"):
+        elif opt == str(Option.opt3):
+            k.update_karyawan() 
+        elif opt == str(Option.opt4):
             k.delete_karyawan()
         elif opt == str("Exit"):
             sys.exit()

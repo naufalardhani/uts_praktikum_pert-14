@@ -12,7 +12,6 @@
      <a href="https://asciinema.org/a/540863"><img src="/assets/main.png" width="836"/></a>
 </p>
 
-Project UAS Praktikum INF-EXPRESS
 # Installation
 
 ## MacOS & Linux

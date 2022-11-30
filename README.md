@@ -1,7 +1,7 @@
 # Dasprog UAS Praktikum
 
-<p align="center">
-     <a href="/assets/main.png"><img src="https://asciinema.org/a/540863.png" width="836"/></a>
+<p align="center">z
+     <a href="https://asciinema.org/a/540863"><img src="/assets/main.png" width="836"/></a>
 </p>
 
 Project UAS Praktikum INF-EXPRESS

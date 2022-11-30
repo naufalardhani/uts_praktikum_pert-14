@@ -1,4 +1,4 @@
-# Dasprog UAS Praktikum
+# INF-Express | Project UAS Praktikum Dasar Pemrograman SV IPB
 
 <p align="center">z
      <a href="https://asciinema.org/a/540863"><img src="/assets/main.png" width="836"/></a>
@@ -23,4 +23,4 @@ Project UAS Praktikum INF-EXPRESS
 
 
 # Author
-- [@naufalardhani](https://github.com/naufalardhani/) | Muhammad Naufal Ardhani - J0403221133
+- [@naufalardhani](https://github.com/naufalardhani/) | Muhammad Naufal Ardhani - J0403221133 - INF AP1

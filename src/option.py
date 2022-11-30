@@ -28,6 +28,9 @@ def show_option():
                     'name': Option.opt1
                 },
                 {
+                    'name': Option.opt5
+                },
+                {
                     'name': Option.opt2
                 },
                 {

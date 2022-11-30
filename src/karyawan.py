@@ -25,6 +25,7 @@ class Karyawan:
 
     def check_karyawan(self):
         data = self.getDataFromJsonFile
+        
         if len(data['kiriman']) == 0:
             print(f"{failed('Data pengiriman tidak ditemukan.')}")
         elif len(data['kiriman']) >= 0:
@@ -58,27 +59,53 @@ class Karyawan:
             range_end = (10**n)-1
             return randint(range_start, range_end)
 
-
-        # print()
-        # print("\n    [ INPUT KARYAWAN ] \n")
         pengirim = input(f"{input_string('Pengirim')}")
         penerima = input(f"{input_string('Penerima')}")
         asal = input(f"{input_string('Asal Kota')}")
         tujuan = input(f"{input_string('Kota Tujuan')}")
-        # role = input(f"    {input_string('Role > ')}")
+        if pengirim != "" or penerima != "" or asal != "" or tujuan != "":
+            karyawan = {
+                "resi": "INF-" + str(generate_noresi(9)),
+                "pengirim": pengirim.title(),
+                "penerima": penerima.title(),
+                "asal": asal.title(),
+                "tujuan": tujuan.title(),
+                "status": "Pending"
+            }
+            data['kiriman'].append(karyawan)
+            with open("db.json", "w") as connect:
+                json.dump(data, connect)
+                print(f"{success('Kiriman berhasil ditambahkan!')}")
+        else:
+            print(f"{failed('Tambah kiriman gagal, tidak boleh ada yang kosong!')}")
 
-        karyawan = {
-            "resi": "INF-" + str(generate_noresi(9)),
-            "pengirim": pengirim.title(),
-            "penerima": penerima.title(),
-            "asal": asal.title(),
-            "tujuan": tujuan.title(),
-            "status": "Pending"
-        }
-        data['kiriman'].append(karyawan)
-        with open("db.json", "w") as connect:
-            json.dump(data, connect)
-            print(f"{success('Kiriman baru berhasil ditambahkan!')}\n")
+    def cari_kiriman(self):
+        data = self.getDataFromJsonFile
+        resi = input(f"{input_string('No Resi')}")
+        table = Table(title="INF-Express | List Kiriman")
+
+        table.add_column("No Resi", justify="center", style="cyan", no_wrap=True)
+        table.add_column("Nama Pengirim", style="magenta")
+        table.add_column("Nama Penerima", style="magenta")
+        table.add_column("Kota Asal", justify="left", style="green")
+        table.add_column("Kota Tujuan", justify="left", style="green")
+        table.add_column("Status", justify="left", style="green")
+
+        for kiriman in data['kiriman']:
+            if kiriman['resi'] == resi:
+                resi = kiriman['resi']
+                pengirim = kiriman['pengirim']
+                penerima = kiriman['penerima']
+                asal = kiriman['asal']
+                tujuan = kiriman['tujuan']
+                status = kiriman['status']
+
+                table.add_row(str(resi), pengirim, penerima, asal, tujuan, status)
+            
+        self.console.print(table)
+
+    
+
 
     def delete_karyawan(self):
         data = self.getDataFromJsonFile
@@ -94,7 +121,6 @@ class Karyawan:
                     data['kiriman'].pop(data['kiriman'].index(kiriman))
                     self.console.log(f"Resi {resi} deleted!")
                 finder = True
-                # print(f"Berhasil menghapus id{_id} dari database!")
                 break
         with open("db.json", "w") as connect:
             json.dump(data, connect)
@@ -136,36 +162,39 @@ class Karyawan:
 
         if answers['kiriman-opt'] == "By Resi":
             resi = input(f"{input_string('Masukan No Resi')}")
-            for kiriman in data['kiriman']:
-                if kiriman['resi'] == resi:
-                    print(info("Status > " + kiriman['status']))
-                    questions = [
-                        {
-                            'type': 'list',
-                            'message': 'Select New Status',
-                            'name': 'status-opt',
-                            'choices': [
-                                {
-                                    'name': "Pending"
-                                },
-                                {
-                                    'name': "On The Way"
-                                },
-                                {
-                                    'name': "Shipped"
-                                }
-                            ],
-                            'validate': lambda answer: 'You must choose at least one topping.' \
-                                if len(answer) == 0 else True
-                        }
-                    ]
-                    answers = prompt(questions, style=style)
-                    # new_status = input(f"{input_string('Status Baru')}")
-                    kiriman['status'] = answers['status-opt']
+            if resi != "":
+                for kiriman in data['kiriman']:
+                    if kiriman['resi'] == resi:
+                        print(info("Status > " + kiriman['status']))
+                        questions = [
+                            {
+                                'type': 'list',
+                                'message': 'Select New Status',
+                                'name': 'status-opt',
+                                'choices': [
+                                    {
+                                        'name': "Pending"
+                                    },
+                                    {
+                                        'name': "On The Way"
+                                    },
+                                    {
+                                        'name': "Shipped"
+                                    }
+                                ],
+                                'validate': lambda answer: 'You must choose at least one topping.' \
+                                    if len(answer) == 0 else True
+                            }
+                        ]
+                        answers = prompt(questions, style=style)
+                        # new_status = input(f"{input_string('Status Baru')}")
+                        kiriman['status'] = answers['status-opt']
 
-        with open("db.json", "w") as connect:
-            json.dump(data, connect)
-            print(f"\n{info('Kiriman baru berhasil ditambahkan!')}\n")
+                with open("db.json", "w") as connect:
+                    json.dump(data, connect)
+                    print(f"{success('Status kiriman berhasil diubah!')}")
+            else:
+                print(f"{failed('Tidak boleh kosong!')}")
                     
             
         

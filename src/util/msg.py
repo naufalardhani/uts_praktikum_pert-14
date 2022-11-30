@@ -13,7 +13,7 @@ def title(sentence):
     return f"{ biru }{ sentence }{ hapus }"
 
 def success(sentence):
-    return f"[{hijau}SUCCESS{hapus}] {sentence}"
+    return f"{hijau}?{hapus} {sentence}"
 
 def failed(sentence):
     return f"{ merah }?{ hapus } {sentence}"

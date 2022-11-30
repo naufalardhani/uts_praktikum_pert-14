@@ -15,7 +15,7 @@ def show_banner():
     {Color.CPURPLE2}╚═╝╚═╝  ╚═══╝╚═╝         ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
     
                    """
-
+    
     credit = f">{Color.ENDC} Ekspedisi Dalam Negeri Terbaik di Indonesia{Color.ENDC}\n\n"
     
     for col in txt:
@@ -27,5 +27,3 @@ def show_banner():
         print(col, end="")
         stdout.flush()
         sleep(0.028)
-
-    # print(txt)
